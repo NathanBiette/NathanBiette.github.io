@@ -1,0 +1,9 @@
+nav {
+	background-color: #e6e6e6;
+    z-index: 1;
+}
+
+#navbarNavAltMarkup .nav-link {
+	padding-right: 3.5rem;
+	padding-left: 3.5rem;
+}

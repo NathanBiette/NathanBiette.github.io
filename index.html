@@ -1,1 +1,156 @@
-<p>Hello World</p>
+<!doctype html>
+<html lang="en">
+<head>
+    <!--CSS Style sheets-->
+    <link rel="stylesheet" href="./CSS/NavbarStyle.css">
+    <link rel="stylesheet" href="./CSS/IdentityAside.css">
+    <link rel="stylesheet" href="./CSS/HomeStyle.css">
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!--
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+
+    <title>Nathan BIETTE</title>
+</head>
+<body>
+
+    <!--Nav bar-->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light">
+        <a class="navbar-brand">Nathan BIETTE</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="MyProjects.html">My Projects</a>
+            </div>
+        </div>
+    </nav>
+
+    <!--Main Row-->
+
+    <div class="row" id="MainRow">
+
+        <!--Empty aside col-->
+        <div class="col-12 col-md-1"></div>
+
+        <!--Aside Column : MyIdentity-->
+        <div class="col-12 col-md-3">
+
+            <div class="card sticky-top" id="MyIdentity">
+                <img class="card-img-top" src="./Media/Profile_Image.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Nathan <b>BIETTE</b></h5>
+                    <p>Graduate student at Telecom-Paristech<br>Master student at NUS School of Computing</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><b>Born :</b> May 2<sup>nd</sup>, 1996</li>
+                    <li class="list-group-item"><b>Nationality</b> : French</li>
+                </ul>
+                <div class="card-header">
+                    <b>Contacts :</b>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <address>
+                            <a href="mailto:nathan.biette@u.nus.edu">nathan.biette@u.nus.edu</a>
+                        </address>
+                        <address>
+                            <a href="mailto:nathan.biette@telecom-paristech.fr">nathan.biette@telecom-paristech.fr</a>
+                        </address>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="https://www.linkedin.com/in/nathan-biette/" class="card-link">LinkedIn</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="https://github.com/NathanBiette" class="card-link">GitHub</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!--Main Column-->
+        <div class="col-12 col-md-6">
+
+            <div class="card" id="WhoAmI">
+                <div class="card-header">
+                    <h4>Who Am I ?</h4>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Hello ! I am Nathan, French student at Telecom-ParisTech. I study Computer Science there and hopefully I will complete my Master degree in Engineering in December 2019. <br>But what I would like to do is making video games ! I am quite creative and I have lots of ideas I would like to see implemented one day. That's why, right now, I'm working on Computer Graphics at the National University of Singapore, to get the technical background needed to work in the video game industry.</p>
+                </div>
+            </div>
+
+            <div class="card" id="My Skills">
+                <div class="card-header">
+                    <h4>My Skills</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5><u>Technical skills :</u></h5>
+                            <ul>
+                                <li>Python</li>
+                                <li>Java</li>
+                                <li>C</li>
+                                <li>C++</li>
+                                <li>Unity</li>
+                                <li>GLSL/HLSL</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h5><u>General skills :</u></h5>
+                            <ul>
+                                <li>Analitical skill</li>
+                                <li>Autonomous and proactive</li>
+                                <li>Organizational skills</li>
+                                <li>Team work and communication</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="card" id="My Education">
+                <div class="card-header">
+                    <h4>My Education</h4>
+                </div>
+                <div class="card-body" id="IncludeTimeline">
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <!--Footer-->
+    <footer>
+        <div class="text-center container-fluid">
+            Created by Nathan BIETTE using Bootstrap
+        </div>
+    </footer>
+    <!--/.Footer-->
+    <!-- JavaScript -->
+    <!-- jQuery first -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+    <!-- My Scripts -->
+    <script type="text/javascript" src="./JS/HomeJS.js"></script>
+
+    <!-- Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
