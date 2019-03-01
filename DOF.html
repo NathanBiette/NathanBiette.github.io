@@ -1,0 +1,366 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+
+    <!-- Bootstrap CSS -->  	
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--CSS Style sheets-->
+    <link rel="stylesheet" href="./CSS/NavbarStyle.css">
+    <link rel="stylesheet" href="./CSS/IdentityAside.css">
+    <link rel="stylesheet" href="./CSS/HomeStyle.css">
+    <link rel="stylesheet" href="./CSS/ProjectStyle.css">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
+
+
+    <title>Depth-of-Field</title>
+  </head>
+  <body>
+
+  	<!--Nav bar-->
+  	<nav class="navbar sticky-top navbar-expand-lg navbar-light">
+  		<a class="navbar-brand">Nathan BIETTE</a>
+  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+  			<span class="navbar-toggler-icon"></span>
+  		</button>
+  		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+  			<div class="navbar-nav">
+  				<a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+  				<a class="nav-item nav-link" href="MyProjects.html">My Projects</a>
+  			</div>
+  		</div>
+  	</nav>
+
+    <!--Main Row-->
+
+    <div class="row" id="MainRow">
+
+      <!--Empty aside col-->
+      <!--<div class="col-12 col-md-1"></div>-->
+      
+      <!--Aside Column : MyIdentity-->
+      <div class="col-md-12 col-lg-3">
+
+        <div class="card sticky-top" id="MyIdentity">
+        <img class="card-img-top" src="./Media/DOF_Raytrace.jpg" alt="Card image cap">
+          <div class="card-body">
+            
+            <p>Master thesis project</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><b>Dates:</b><br /> Sep 2018 - Present</li>
+            <li class="list-group-item"><b>Team :</b><br /> 
+            	<ul>
+            		Nathan BIETTE<br />
+            	</ul>
+            </li>
+            <li class="list-group-item"><b>Technologies:</b><br />
+ 				<ul>
+              		<li>Nvidia Falcor API</li>
+              		<li>Direct3D 12</li>
+              		<li>Nvidia RTX</li>
+              		<li>C++ / HLSL</li>
+            	</ul>
+            </li>
+          </ul>
+          <div class="card-header">
+            <b>Links :</b>
+          </div>
+          <ul class="list-group list-group-flush">
+          	<li class="list-group-item">
+          		<ul>
+          			<li>
+          				<a href="https://github.com/NathanBiette/Hybrid_raytraced_post_processed_DOF">Github</a>
+          			</li>
+          			<li>
+          				<a href="http://cwyman.org/code/dxrTutors/dxr_tutors.md.html">DXR Tutorial</a>
+          			</li>
+          			<li>
+          				<a href=" http://advances.realtimerendering.com/s2014/sledgehammer/Next-Generation-Post-Processing-in-Call-of-Duty-Advanced-Warfare-v17.pptx">DOF implementation in Call of Duty Advanced Warfare (slides)</a>
+          			</li>
+          			<li>
+          				<a href=" http://advances.realtimerendering.com/s2018/2018-08-13-SIGGRAPH-A-Life-of-a-Bokeh.pptx">DOF implementation in Unreal Engine (slides)</a>
+          			</li>
+          			<li>
+          				<a href="https://developer.nvidia.com/falcor">Nvidia Falcor API</a>
+          			</li>
+          			
+          		</ul>
+          	</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!--Main Column-->
+      <div class="col-md-12 col-lg-7">
+
+      	<div class="card" id="WhoAmI">
+			<div class="card-header">
+            	<h1 class="project-title"><b>Hybrid Raster/Ray-trace Depth-of-Field</b></h1>
+          	</div>
+          	<!--Main Card body-->
+      		<div class="project-body card-body">
+
+      			<h3><b>Overview</b></h3>
+
+      			<p class="project-text">The goal of this <b>master thesis project</b> is to develop a hybrid rasterized/ray-traced depth-of-field effect. The depth-of-field (DOF) effect is the blur that can be seen on objects out of the focus plane, in pictures taken with real-world cameras, especially if the DOF is shallow (small zone of focus). But when DOF is rendered as a post-process using rasterization, many artefacts can appear. By using ray tracing I'm trying to mitigate some of those artefacts while keeping the framerate above 30fps.</p>
+
+      			<!--images-->
+      			<div class="row">
+      				<div class="col-md-3"></div>
+      				<div class="col-md-6">
+      					<div class="card mb-4 shadow-sm">
+      						<a href="./Media/DOF_Grass.jpg">
+      							<img class="image-project-large" src="./Media/DOF_Grass.jpg" alt="Card image cap">
+      						</a>
+      					</div>
+      				</div>
+      				<div class="col-md-3"></div>
+      				<div class="legend">
+      					<p>Exemple of shallow DOF with real-world camera</p>
+      				</div>
+      			</div>
+      			<!--images end-->
+
+      			<p class="project-text">To achieve such an effect, I am rendering a normal image using rasterization and applying a post-processing to the image based on the implementation described in Next-Generation Post Processing in call of duty advanced warfare (<a href="http://advances.realtimerendering.com/s2014/sledgehammer/Next-Generation-Post-Processing-in-Call-of-Duty-Advanced-Warfare-v17.pptx">slides</a>).<br/>
+      			I modified the set of passes applied to the image to render separately to layers: near and far part of the image. Then I apply a ray tracing pass to correct partial occlusion artefacts, mixing the result into the different layers before compositing back the layers together with the initial image.<br/>
+      			To implement this set of passes I am using the DXR <a href="http://cwyman.org/code/dxrTutors/dxr_tutors.md.html">tutorial code</a> as a starting point and I modified it to implement my custom passes. This is using Nvidia Falcor API built on top of Direct3D 12. <br/>
+      			</p>
+
+      			
+      			<h3><b>My contributions</b></h3>
+
+      			<ul>
+          			<li>
+          				<p>Surveyed many different DOF techniques presented in scientific papers and industry talks (among which the recent Unreal Engine DOF implementation, <a href="http://advances.realtimerendering.com/s2018/2018-08-13-SIGGRAPH-A-Life-of-a-Bokeh.pptx">see slides</a>)</p>
+          			</li>
+          			<li>
+          				<p>Reengineered the DOF implementation presented in Next-Generation Post Processing in call of duty advanced warfare (<a href="http://advances.realtimerendering.com/s2014/sledgehammer/Next-Generation-Post-Processing-in-Call-of-Duty-Advanced-Warfare-v17.pptx">slides</a>)</p>
+          			</li>
+          			<li>
+          				<p>Modified the set of passes to include raytracing in an efficient way</p>
+          			</li>
+          			<li>
+          				<p>Currently programing the passes in HLSL and C++ with Nvidia Falcor API on top of Direct3D 12</p>
+          			</li>
+          		</ul>
+
+
+          	</div>
+          </div>
+          <!--end overview-->
+
+
+
+          <div class="card" id="WhoAmI">
+          	<div class="card-header">
+            	<h3 class="project-title">Project Description</h3>
+          	</div>
+          	<div class="project-body card-body">
+
+          		<h3><b>Real-time raytracing, a new tool in the rendering engineer toolbox</b></h3>
+
+          		<p class="project-text">Recent advances in hardware-acceleration have turned the idea of real-time raytracing into a reality. Such hardware can solve ray/geometry intersection much faster than on CPU. It enables the use of rays during real-time rendering in addition to classic rasterizer to add effects such as soft shadows, reflections and transparency. Ray-tracing has been used in non-real-time rendering for many years, especially in the movie industry. State of the art GPU will take hours for pure ray-trace based rendering of a frame.</br/>
+          		Research around ray-tracing and rasterizing techniques has been active for several decades, pushing further the boundaries of realistic image rendering for both real-time and non-real-time applications. However, those two families of techniques have never truly been mixed together, as ray-tracing was too slow for real-time rendering and rasterizing wasn’t realistic enough for non-real time rendering.
+      			</p>
+
+      			<div class="my-media">
+      				<iframe width="560" height="315" src="https://www.youtube.com/embed/Q1cuuepVNoY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      				<p>Siggraph talk introducing DirectX Raytracing</p>
+      			</div>
+
+      			<p class="project-text">
+      				Now that hardware acceleration enables the use of ray-tracing in real-time to some extent, a unique opportunity appears: to develop new hybrid rendering techniques using the most suitable tool for each effect and the requirements of the scene. Hybrid benefits both the video game industry and the movie industry. In fact, even if hardware acceleration for raytracing still needs to penetrate the mass market and be more widely used in games for better image quality, the movie industry could be the first to widely use this technology. Combining raster-based rendering and raytracing can lead to great visual quality while maintaining an interactive framerate, giving the opportunity for artists to iterate much faster in their creative process.<br/>
+      			</p>
+
+      			<h3><b>How to post-process depth-of-field?</b></h3>
+
+      			<p class="project-text">
+      				Depth-of-field (DOF) is the blurry visual on a real-world camera when an object is out of the zone of focus. It comes from the fact that light rays are traveling through the lens but are not intersecting exactly on the sensor of the camera. The result is a spot rather than a point on the camera sensor and the superposition of many spots wields the blurry effect. This spot is called a circle of confusion (COC).
+      			</p>
+
+				<!--images-->
+      			<div class="row">
+      				<div class="col-md-2"></div>
+      				<div class="col-md-8">
+      					<div class="card mb-4 shadow-sm">
+      						<a href="./Media/DOF_COC.png">
+      							<img class="image-project-large" src="./Media/DOF_COC.png" alt="Card image cap">
+      						</a>
+      					</div>
+      				</div>
+      				<div class="col-md-2"></div>
+      				<div class="legend">
+      					<p>Circle of confusion with thin lens camera</p>
+      				</div>
+      			</div>
+      			<!--images end-->
+
+
+      			<p class="project-text">
+      				In games, DOF is done as a post-process effect: based on the information from the Z-Buffer, the image is blurred according to the computed COC size. 
+      			</p>
+
+      			<p class="project-text">
+      				But this blurring pass is complex, and many artefacts can appear if the pass isn’t done carefully. First, the geometric order of the object of the scene needs to be respected and a background object cannot “leak” onto a foreground one while being blurred. Also, because we are blurring the color from the final (sharp) image, we do not have access to the information in the background. Therefore, a thin object in the foreground of a camera shot should look transparent if out of focus but, in the final image, we do not know how the background behind the thin object looks like. This is the partial occlusion problem which prevents us from rendering blurry semi-transparent foreground on top of sharp background.
+      			</p>
+
+      			<p class="project-text">
+      				Moreover, due to the graphic hardware being faster at reading texture than writing it, the blurring is usually performed in a scatter-as-gather manner, where the color of the surroundings is aggregated into each pixel according to the samples COC size. If a nearby samples were to have a COC big enough to cover the target pixel then its color is added to the resulting color of the target pixel. This introduce issue with bokeh shapes and very luminous parts of the initial image being badly rendered in the final image. 
+      			</p>
+
+      			<p class="project-text">
+      				If the rendering uses layering and compositing, then discontinuities and other artefacts can appear depending on how the compositing is performed.
+      			</p>
+
+
+      			<h3><b>How raytracing is helping us?</b></h3>
+
+      			<p class="project-text">
+      				Raytracing can be used to remove partial occlusion artefact by selectively ray tracing the occluded areas. But ray tracing is expensive and need to be used efficiently. That’s why, we are computing the Z gradient in the Z buffer to detect where this partial occlusion artefacts might occur. Then we can ray trace those specific pixels and add them to the background layer before compositing back together. 
+      			</p>
+
+      			<p class="project-text">
+      				The challenge here is to filter the Z-Buffer depth map to find the Z-discontinuities and ray trace only the occluded areas in the region with high Z gradient. To speed up the results, discontinuities in the background can be ignored but discontinuities in the foreground still need to be handled.
+      			</p>
+
+
+      			<h3><b>Initial depth-of-field implementation in Call of Duty: Modern Warfare</b></h3>
+
+				<!--images-->
+      			<div class="row">
+      				<div class="col-md-2"></div>
+      				<div class="col-md-8">
+      					<div class="card mb-4 shadow-sm">
+      						<a href="./Media/DOF_Pipeline_Old.jpg">
+      							<img class="image-project-large" src="./Media/DOF_Pipeline_Old.jpg" alt="Card image cap">
+      						</a>
+      					</div>
+      				</div>
+      				<div class="col-md-2"></div>
+      				<div class="legend">
+      					<p>The original filter graph of the DOF implementation in CoD Advanced Warfare</p>
+      				</div>
+      			</div>
+      			<!--images end-->
+
+      			<p class="project-text">
+      				The <b>tiling pass</b> is used to compute the COC and the maximum Z in tiles of 20 by 20 pixels.
+      			</p>
+
+      			<p class="project-text">
+      				The <b>dilate pass</b> is used to expand the tiles in the foreground outwards to cover the area which will be blurred, with semi-transparent foreground objects leaking onto objects in focus or in the background.
+      			</p>
+
+      			<p class="project-text">
+      				Then the <b>presort pass</b> computes the alpha contribution of the samples in both foreground and background layers, relatively to the closest pixel in the tile, according to their COC size. The further from the focus plane a pixel is in term of depth, the bigger its COC will be and the more spread-out the color of this pixel is, therefore the alpha for this color should be smaller (corresponding to a larger and more transparent spot on the camera sensor).
+      			</p>
+
+      			<p class="project-text">
+      				The <b>down-sample pass</b> filters the full resolution image with a 9 tap bilateral filter, effectively wielding a half resolution image to work. It performs a low pass filtering of the image at the same time while keeping the Z discontinuities in the image. The idea is to fill in the gap of the main filter pass by prefiltering while down sampling.
+      			</p>
+
+      			<p class="project-text">
+      				The <b>main filtering pass</b> is a 49-tap circular filter scaled according to the max COC in each tile and performs the blurring by gathering the color of each nearby sample and combine them with alpha-addition using the presorted alpha. 
+      			</p>
+
+      			<p class="project-text">
+      				Then a <b>median pass</b> is performed on the result of the main pass which is scaled back to full resolution. 
+      			</p>
+
+      			<p class="project-text">
+      				I modified this filter graph to accommodate the raytracing of partially occluded areas. 
+      			</p>
+
+
+      			<!--images-->
+      			<div class="row">
+      				<div class="col-md-2"></div>
+      				<div class="col-md-8">
+      					<div class="card mb-4 shadow-sm">
+      						<a href="./Media/DOF_Pipeline_New.jpg">
+      							<img class="image-project-large" src="./Media/DOF_Pipeline_New.jpg" alt="Card image cap">
+      						</a>
+      					</div>
+      				</div>
+      				<div class="col-md-2"></div>
+      				<div class="legend">
+      					<p>The new filter graph I created to achieve the hybrid DOF effect</p>
+      				</div>
+      			</div>
+      			<!--images end-->
+
+      			<p class="project-text">
+      				First, the main filter pass doesn’t render to one texture anymore but two for the far and near field. The selection of the texture to render to is done according to the Z value of each pixels, depending if they are in front of the zone of focus or behind the zone of focus.
+      			</p>
+
+      			<p class="project-text">
+      				<u>Note</u>: The existence of a zone of focus and not just a plane of focus comes from the fact that cells on the sensor of a camera have a defined surface and a COC that is small enough to fit in only one cell will be perceived the same as a perfectly in focus point by the camera. 
+      			</p>
+
+      			<p class="project-text">
+      				Then the Z buffer is filtered with a 5x5 Sobel operator in both X and Y direction at half-resolution to get the gradient of Z and the result is written only if the target pixel is in the foreground. That way we can specifically target edges in term of Z of objects in the foreground and render using ray tracing what is behind.
+      			</p>
+
+      			<p class="project-text">
+      				A dilate pass is used to grow those targeted area inward with a 9-tap filter scaled on the max COC size in a 20x20 tile. That way we are expanding the area considered as partially occluded.
+      			</p>
+
+      			<p class="project-text">
+      				Finally, we use the intensity of the gradient to scale the number of rays we are using, shooting more rays closer to the edge, because the further away we are from the edge, the less transparent the foreground object is and the less visible the background is, so we need less ray to get an acceptable result. The result is written in the initial image which is then composited back with the far and near layers.
+      			</p>
+
+      			<h3><b>Implementation and results</b></h3>
+
+      			<p class="project-text">
+      				Implementation is still in progress at the moment.<br/>
+      				I’m using the <a href="http://cwyman.org/code/dxrTutors/dxr_tutors.md.html">DXR tutorial</a> code as a starting point for my implementation.<br/>
+      				The rendering is performed with Nvidia Falcor API built on Direct3D 12 and I’m using a RTX 2080 to perform the hardware accelerated ray tracing
+      			</p>
+
+      			<p class="project-text">
+      				Result will be coming soon. 
+      			</p>
+
+          	</div>
+          	<!--Main Card body End-->
+            
+
+
+
+          </div>
+
+        </div>
+        <!--end Main Column-->
+        
+      </div>
+      <!--end Main Row (with both aside and main card)-->
+   
+
+    <!--Footer-->
+    <footer>
+        <div class="text-center container-fluid">
+          Created by Nathan BIETTE using Bootstrap
+        </div>
+    </footer>
+    <!--/.Footer-->
+
+
+
+    <!-- JavaScript -->
+
+    <!-- jQuery first -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+    
+
+    <!-- Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
