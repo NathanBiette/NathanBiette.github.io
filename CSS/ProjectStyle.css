@@ -58,3 +58,15 @@
 	font-style: italic;
 	margin-bottom: 2.5rem
 }
+
+.card-header h3{
+	padding-bottom: 0rem;
+}
+
+.contributions p{
+	font-weight:bold;
+}
+
+.my-media iframe{
+	max-width: 100%;
+}
