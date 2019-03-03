@@ -65,8 +65,8 @@
             <li class="list-group-item"><b>Technologies:</b><br />
  				<ul>
               		<li><a href="https://godotengine.org/">Godot Engine</a></li>
-              		<li>Krita Software</li>
-              		<li>Websockets</li>
+              		<li><a href="https://krita.org/en/">Krita Software</a></li>
+              		<li><a href="https://github.com/NathanBiette/Maze_It_Yourself/tree/master-2/websockets">Websockets</a></li>
             	</ul>
             </li>
           </ul>
@@ -256,6 +256,37 @@
       			<p class="project-text">We developped two modes for the game : a solo mode where a dungeon is generated automatically by connecting doors of a set of pre-built rooms together in some random orders and a multiplayer mode where player join the same lobby through a password on a server and fight as Daedalus vs Theseus. In the second mode, Daedalus chooses which door to connect and which enemies to spawn.<br/>
       			As the rooms were pre-built, we were only passing the doors connections and the monters list of each room from one player to the other through the server.
       			</p>
+
+				<!--images-->
+      			<div class="row">
+
+      				<div class="col-md-4">
+      					<div class="card mb-4 shadow-sm">
+      						<a href="./Media/MIY_Godot_1.jpg">
+      							<img class="image-project-large" src="./Media/MIY_Godot_1.jpg" alt="Card image cap">
+      						</a>
+      					</div>
+      				</div>
+      				<div class="col-md-4">
+      					<div class="card mb-4 shadow-sm">
+      						<a href="./Media/MIY_Godot_2.jpg">
+      							<img class="image-project-large" src="./Media/MIY_Godot_2.jpg" alt="Card image cap">
+      						</a>
+      					</div>
+      				</div>
+      				<div class="col-md-4">
+      					<div class="card mb-4 shadow-sm">
+      						<a href="./Media/MIY_Minotaur.png">
+      							<img class="image-project-long" src="./Media/MIY_Minotaur.png" alt="Card image cap">
+      						</a>
+      					</div>
+      				</div>
+      				<div class="legend">
+      					<p>Levels built in Godot engine and sprite of Minotaur used for the final boss</p>
+      				</div>
+      			</div>
+      			<!--images end-->
+
 
       			<p class="project-text">
       			The loot system proved trickier to implement than we first thought. In fact, the idea was to equip the new item as soon as the player walks on it, but drop the previous item only once the player moves away from the tile. Yet, because of the way movements were implemented, it requiered carefull handling of situations where Theseus was bumping into a wall while standing on a item spot, for example, to make sure the item wasn't dropped yet as theseus didn't left the tile.
