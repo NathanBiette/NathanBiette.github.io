@@ -248,14 +248,24 @@
 
 
       			<p class="project-text">
-      				One of the challenge we faced was <br/>
+      			One of the challenge we faced was coming up with an efficient way to control the character. We tested using swipe gestures but it was difficult to be reactive with lots of enemies. Therefore we used classic arrows but we tried to different layout. One cross like layout and one split layout where up/down and left/rigth arrows were placed on the rigth and left side of the screen respectively. After some test, it turned out that split arrows control were more efficient to move but requiered more training while cross like layout was very intuitive but a bit less efficient as the arrows keys were packed at the same location. <br/>
+      			We choose to stick with the cross layout, more easy to pick up for players.
+      			</p>
+
+      			<p class="project-text">We developped two modes for the game : a solo mode where a dungeon is generated automatically by connecting doors of a set of pre-built rooms together in some random orders and a multiplayer mode where player join the same lobby through a password on a server and fight as Daedalus vs Theseus. In the second mode, Daedalus chooses which door to connect and which enemies to spawn.<br/>
+      			As the room were pre-built, we were only passing the door connections and the monters list of each room from one player to the other through the server.
       			</p>
 
       			<p class="project-text">
-      				
+      			The loot system proved trickier to implement than we first thought. In fact, the idea was to equip the new item as soon as the player walks on it, but drop the previous item only once the player move away from the tile. Yet, because of the way movements were implemented, it requiered carefull handling of situations where Theseus was bumping into a wall while standing on a item spot, to make sure the item wasn't dropped yet as theseus didn't left the tile.
       			</p>
 
-      			
+      			<p class="project-text">
+      			For the door system, we explored the possibility to get non symetrical door connections but didn't implement it as it would have proved to confusing for the player.
+      			</p>
+
+
+      			<h3><b>Designing the gameplay</b></h3>
 
 
           	</div>
