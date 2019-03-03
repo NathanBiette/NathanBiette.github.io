@@ -131,29 +131,50 @@
       			<p class="project-text">To achieve such an effect, I am rendering a normal image using rasterization and applying a post-processing to the image based on the implementation described in Next-Generation Post Processing in call of duty advanced warfare (<a href="http://advances.realtimerendering.com/s2014/sledgehammer/Next-Generation-Post-Processing-in-Call-of-Duty-Advanced-Warfare-v17.pptx">slides</a>).<br/>
       			I modified the set of passes applied to the image to render separately to layers: near and far part of the image. Then I apply a ray tracing pass to correct partial occlusion artefacts, mixing the result into the different layers before compositing back the layers together with the initial image.<br/>
       			To implement this set of passes I am using the DXR <a href="http://cwyman.org/code/dxrTutors/dxr_tutors.md.html">tutorial code</a> as a starting point and I modified it to implement my custom passes. This is using Nvidia Falcor API built on top of Direct3D 12. <br/>
-      			</p>
-
-      			
-      			<h3><b>My contributions</b></h3>
-
-      			<ul>
-          			<li>
-          				<p>Surveyed many different DOF techniques presented in scientific papers and industry talks (among which the recent Unreal Engine DOF implementation, <a href="http://advances.realtimerendering.com/s2018/2018-08-13-SIGGRAPH-A-Life-of-a-Bokeh.pptx">see slides</a>)</p>
-          			</li>
-          			<li>
-          				<p>Reengineered the DOF implementation presented in Next-Generation Post Processing in call of duty advanced warfare (<a href="http://advances.realtimerendering.com/s2014/sledgehammer/Next-Generation-Post-Processing-in-Call-of-Duty-Advanced-Warfare-v17.pptx">slides</a>)</p>
-          			</li>
-          			<li>
-          				<p>Modified the set of passes to include raytracing in an efficient way</p>
-          			</li>
-          			<li>
-          				<p>Currently programing the passes in HLSL and C++ with Nvidia Falcor API on top of Direct3D 12</p>
-          			</li>
-          		</ul>
+      		</p>
 
 
-          	</div>
-          </div>
+      		<!--my contributions-->
+      		<div class="card">
+      			<div class="card-header">
+      				<h3>My contributions</h3>
+      			</div>
+      			<div class="project-body card-body contributions">
+
+      				<ul>
+      					<li>
+      						<p>
+      							Surveyed many different DOF techniques presented in scientific papers and industry talks (among which the recent Unreal Engine DOF implementation, <a href="http://advances.realtimerendering.com/s2018/2018-08-13-SIGGRAPH-A-Life-of-a-Bokeh.pptx">see slides</a>)
+      						</p>
+      					</li>
+      					<li>
+      						<p>
+      							Successfully pitched the new research topic of hybrid rendering to supervisor, leading to the award of a research grant
+      						</p>
+      					</li>
+      					<li>
+      						<p>
+      							Reengineered the DOF implementation presented by Sledgehammer Games in <a href="http://advances.realtimerendering.com/s2014/#_NEXT_GENERATION_POST">Next-Generation Post Processing in Call of Duty Advanced Warfare</a>
+      						</p>
+      					</li>
+      					<li>
+      						<p>
+      							Modified the set of passes to include raytracing in an efficient way
+      						</p>
+      					</li>
+      					<li>
+      						<p>
+      							Currently programing the passes in HLSL and C++ with Nvidia Falcor API on top of Direct3D 12
+      						</p>
+      					</li>
+      				</ul>
+
+      			</div>
+      		</div>
+
+
+      	</div>
+      </div>
           <!--end overview-->
 
 
