@@ -53,7 +53,7 @@
             <p>Master thesis project</p>
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item"><b>Dates:</b><br /> Sep 2018 - Present</li>
+            <li class="list-group-item"><b>Dates:</b><br /> Sep 2018 - May 2018</li>
             <li class="list-group-item"><b>Team :</b><br /> 
             	<ul>
             		Nathan BIETTE<br />
@@ -102,7 +102,7 @@
 
       	<div class="card" id="WhoAmI">
 			<div class="card-header">
-            	<h1 class="project-title"><b>Hybrid Raster/Ray-trace Depth-of-Field</b></h1>
+            	<h1 class="project-title"><b>Hybrid Post-Processed and Ray-Traced Depth-of-Field</b></h1>
           	</div>
           	<!--Main Card body-->
       		<div class="project-body card-body">
@@ -112,20 +112,13 @@
       			<p class="project-text">The goal of this <b>master thesis project</b> is to develop a hybrid rasterized/ray-traced depth-of-field effect. The depth-of-field (DOF) effect is the blur that can be seen on objects out of the focus plane, in pictures taken with real-world cameras, especially if the DOF is shallow (small zone of focus). But when DOF is rendered as a post-process using rasterization, many artefacts can appear. By using ray tracing I'm trying to mitigate some of those artefacts while keeping the framerate above 30fps.</p>
 
       			<!--images-->
-      			<div class="row">
-      				<div class="col-md-3"></div>
-      				<div class="col-md-6">
-      					<div class="card mb-4 shadow-sm">
-      						<a href="./Media/DOF_Grass.jpg">
-      							<img class="image-project-large" src="./Media/DOF_Grass.jpg" alt="Card image cap">
-      						</a>
-      					</div>
-      				</div>
-      				<div class="col-md-3"></div>
-      				<div class="legend">
-      					<p>Exemple of shallow DOF with real-world camera</p>
-      				</div>
-      			</div>
+      			<div class="my-media">
+
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/fWe6fSt5ows" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="legend">
+                <p>Hybrid Depth-of-Field Effect Overview</p>
+              </div>
+            </div>
       			<!--images end-->
 
       			<p class="project-text">To achieve such an effect, I am rendering a normal image using rasterization and applying a post-processing to the image based on the implementation described in Next-Generation Post Processing in call of duty advanced warfare (<a href="http://advances.realtimerendering.com/s2014/sledgehammer/Next-Generation-Post-Processing-in-Call-of-Duty-Advanced-Warfare-v17.pptx">slides</a>).<br/>
@@ -159,12 +152,12 @@
       					</li>
       					<li>
       						<p>
-      							Modified the set of passes to include raytracing in an efficient way
+      							Modified the set of passes to include ray tracing in an efficient way
       						</p>
       					</li>
       					<li>
       						<p>
-      							Currently programing the passes in HLSL and C++ with Nvidia Falcor API on top of Direct3D 12
+      							Programmed the passes in HLSL and C++ with Nvidia Falcor API on top of Direct3D 12 and tested the new effect on Nvidia RTX 2080
       						</p>
       					</li>
       				</ul>
