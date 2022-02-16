@@ -89,7 +89,12 @@
           			<li>
           				<a href="https://developer.nvidia.com/falcor">Nvidia Falcor API</a>
           			</li>
-          			
+                    <li>
+          				<a href="https://dl.acm.org/doi/10.1145/3388770.3407426">SIGGRAPH poster (follow-up work)</a>
+          			</li>
+          			<li>
+          				<a href="https://www.scitepress.org/PublicationsDetail.aspx?ID=EWHNnNQwqTQ=&t=1">GRAPP paper (follow-up work)</a>
+          			</li>
           		</ul>
           	</li>
           </ul>
@@ -330,17 +335,14 @@
       				Finally, we use the intensity of the gradient to scale the number of rays we are using, shooting more rays closer to the edge, because the further away we are from the edge, the less transparent the foreground object is and the less visible the background is, so we need less ray to get an acceptable result. The result is written in the initial image which is then composited back with the far and near layers.
       			</p>
 
-      			<h3><b>Implementation and results</b></h3>
+      			<h3><b>Follow-up research works</b></h3>
 
       			<p class="project-text">
-      				I’m using the <a href="http://cwyman.org/code/dxrTutors/dxr_tutors.md.html">DXR tutorial</a> code as a starting point for my implementation.<br/>
-      				The rendering is performed with Nvidia Falcor API built on Direct3D 12 and I’m using a RTX 2080 to perform the hardware accelerated ray tracing<br/>
-				<br/>
-				Work on the dissertation is finished. The dissertation will be made available (hopefully) soon with National University of Singapore's agreement. But the technique is still being researched on and extended with the help of other students and results will be published in a near future.<br/>
-      			</p>
-
-      			<p class="project-text">
-      				Result will be coming soon. 
+      				A team of Master students took over the project and improved upon this dissertaion initial implementation.<br/>
+                    <br/>
+                    A <a href="https://dl.acm.org/doi/10.1145/3388770.3407426">poster</a> presenting the improved technique has been published at SIGGRAPH 2020<br/>
+				    <br/>
+				    A <a href="https://www.scitepress.org/PublicationsDetail.aspx?ID=EWHNnNQwqTQ=&t=1">full paper</a> presenting the results of this research work has been published at GRAPP 2022<br/>
       			</p>
 
           	</div>
